@@ -13,7 +13,7 @@ class Game
     end
 
     def dice_rolls(roll_array = [])
-    (5-roll_array.length).times do 
+    (5-roll_array.length).times do
         roll_array << dice
     end
     return roll_array
@@ -29,10 +29,10 @@ class Game
         stored_roll = dice_rolls
         print stored_roll
         i = 0
-        while i < 2  
-            puts 'Would you like to roll again? 1: Yes 2: No'
+        while i < 2
+            puts "\nWould you like to roll again? 1: Yes 2: No"
             user_choice = gets.chomp
-            if user_choice == '1' 
+            if user_choice == '1'
                 stored_roll = dice_rolls(dice_to_keep)
                 puts "New roll: #{stored_roll}"
                 i += 1
@@ -44,4 +44,3 @@ class Game
         return stored_roll
     end
 end
-
